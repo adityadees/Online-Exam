@@ -1363,8 +1363,10 @@ class Adm extends CI_Controller {
 
 						$html .= $d->soal.'<br>'.$tampil_media.'<div class="funkyradio">';
 
-						$arra = [];
-						for ($j = 0; $j < $this->config->item('jml_opsi'); $j++) {
+						$indexes = range(0, $this->config->item('jml_opsi') - 1);
+						shuffle($indexes);
+						foreach ($indexes as $j) {
+					//	for ($j = 0; $j < $this->config->item('jml_opsi'); $j++) {
 							$opsi = "opsi_".$this->opsi[$j];
 
 							$checked = $arr_jawab[$d->id]["j"] == strtoupper($this->opsi[$j]) ? "checked" : "";
@@ -1375,10 +1377,10 @@ class Adm extends CI_Controller {
 
 							$pilihan_opsi = empty($pc_pilihan_opsi[1]) ? "-" : $pc_pilihan_opsi[1];
 
+							//<span class="text-primary">'.$this->opsi[$j].'.</span>
 							$html .= 
 							'<div class="funkyradio-success" onclick="return simpan_sementara();">
 							<fieldset class="radio">
-							<span class="text-primary">'.$this->opsi[$j].'.</span>
 							<input type="radio" id="opsi_'.strtoupper($this->opsi[$j]).'_'.$d->id.'" name="opsi_'.$no.'" value="'.strtoupper($this->opsi[$j]).'" '.$checked.'> 
 							<label for="opsi_'.strtoupper($this->opsi[$j]).'_'.$d->id.'">'.$pilihan_opsi.$tampil_media_opsi.'</label> 
 							</fieldset>
