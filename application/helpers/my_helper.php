@@ -86,7 +86,6 @@ function tambah_jam_sql($menit) {
 }
 
 function bersih($data, $pil) {
-	//return mysql_real_escape_string 
 	return $data->$pil;
 }
 
@@ -182,9 +181,9 @@ function gen_menu() {
 	} else if ($sess_level == "admin") {
 		$menu = array(
 			array("icon"=>"dashboard", "url"=>"", "text"=>"Dashboard"),
-			array("icon"=>"users", "url"=>"siswa", "text"=>"Data Siswa"),
-			array("icon"=>"list-alt", "url"=>"guru", "text"=>"Data Guru/Dosen"),
-			array("icon"=>"list-alt", "url"=>"mata_pelajaran", "text"=>"Data Mapel"),
+			array("icon"=>"users", "url"=>"siswa", "text"=>"Siswa"),
+			array("icon"=>"list-alt", "url"=>"guru", "text"=>"Guru"),
+			array("icon"=>"list-alt", "url"=>"mata_pelajaran", "text"=>"Mata Pelajaran"),
 			array("icon"=>"list-alt", "url"=>"soal_ujian", "text"=>"Soal"),
 			array("icon"=>"file", "url"=>"h_ujian", "text"=>"Hasil Ujian"),
 		);

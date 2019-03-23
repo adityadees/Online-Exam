@@ -24,7 +24,7 @@
           <div id="konfirmasi"></div>
 
           <div class="form-group fgsoal">
-            <div class="col-md-2"><label>Mapel</label></div>
+            <div class="col-md-2"><label>Mata Pelajaran</label></div>
             <div class="col-md-10"><?php echo form_dropdown('id_mapel', $p_mapel, $d['id_mapel'], 'class="form-control" id="id_mapel" required'); ?></div>
           </div>
           <div class="form-group fgsoal">

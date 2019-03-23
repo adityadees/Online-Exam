@@ -22,7 +22,7 @@
                         <tr><td style="width: 25%">Guru</td><td style="width: 75%">
                             <?php echo form_dropdown('id_guru', $p_guru, '', 'class="form-control" id="id_guru" required'); ?>
                         </td></tr>
-                        <tr><td>Mapel</td><td><?php echo form_dropdown('id_mapel', $p_mapel, '', 'class="form-control" id="id_mapel" required'); ?></td></tr>
+                        <tr><td>Mata Pelajaran</td><td><?php echo form_dropdown('id_mapel', $p_mapel, '', 'class="form-control" id="id_mapel" required'); ?></td></tr>
 
                         <tr><td>File</td><td><input type="file" class="form-control col-md-3" name="import_excel" required></td></tr>
                         <tr><td></td><td>

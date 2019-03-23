@@ -535,4 +535,4 @@ $config['proxy_ips'] = '';
 $config['jml_opsi']			= 4;			
 $config['uri_js']			= $uri_js;		
 $config['editor_style']		= "replace";	
-$config['tampil_nilai']		= TRUE; 
+$config['tampil_nilai']		= FALSE; 

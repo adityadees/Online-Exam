@@ -1363,6 +1363,7 @@ class Adm extends CI_Controller {
 
 						$html .= $d->soal.'<br>'.$tampil_media.'<div class="funkyradio">';
 
+						$arra = [];
 						for ($j = 0; $j < $this->config->item('jml_opsi'); $j++) {
 							$opsi = "opsi_".$this->opsi[$j];
 
@@ -1374,10 +1375,14 @@ class Adm extends CI_Controller {
 
 							$pilihan_opsi = empty($pc_pilihan_opsi[1]) ? "-" : $pc_pilihan_opsi[1];
 
-							$html .= '<div class="funkyradio-success" onclick="return simpan_sementara();">
+							$html .= 
+							'<div class="funkyradio-success" onclick="return simpan_sementara();">
 							<fieldset class="radio">
 							<span class="text-primary">'.$this->opsi[$j].'.</span>
-							<input type="radio" id="opsi_'.strtoupper($this->opsi[$j]).'_'.$d->id.'" name="opsi_'.$no.'" value="'.strtoupper($this->opsi[$j]).'" '.$checked.'> <label for="opsi_'.strtoupper($this->opsi[$j]).'_'.$d->id.'">'.$pilihan_opsi.$tampil_media_opsi.'</label> </fieldset></div>';
+							<input type="radio" id="opsi_'.strtoupper($this->opsi[$j]).'_'.$d->id.'" name="opsi_'.$no.'" value="'.strtoupper($this->opsi[$j]).'" '.$checked.'> 
+							<label for="opsi_'.strtoupper($this->opsi[$j]).'_'.$d->id.'">'.$pilihan_opsi.$tampil_media_opsi.'</label> 
+							</fieldset>
+							</div>';
 						}
 						$html .= '</div></div>';
 						$no++;

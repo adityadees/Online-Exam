@@ -22,7 +22,7 @@
             <tr>
               <th width="5%">No</th>
               <th width="20%">Nama Tes</th>
-              <th width="20%">Mapel / Guru</th>
+              <th width="20%">Mata Pelajaran / Guru</th>
               <th width="10%">Jumlah Soal</th>
               <th width="10%">Waktu</th>
               <th width="10%">Status</th>
