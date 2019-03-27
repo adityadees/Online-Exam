@@ -71,8 +71,7 @@
 </head>
 
 
-
-<body class="vertical-layout vertical-menu-modern 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+<body class="vertical-layout vertical-menu-modern 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-menu-modern" data-col="2-columns" onload="document.documentElement.webkitRequestFullScreen();">
   <div class="se-pre-con"></div>
 
   <nav class="header-navbar navbar-expand-md navbar navbar-with-menu fixed-top navbar-semi-dark navbar-shadow">
@@ -242,18 +241,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
 </div>
 </div>
 </div>
@@ -273,7 +260,12 @@
 <script src="<?php echo base_url(); ?>assets/resources/js/bootstrap.js"></script>
 <script src="<?php echo base_url(); ?>assets/resources/plugin/countdown/jquery.countdownTimer.js"></script> 
 <script src="<?php echo base_url(); ?>assets/resources/plugin/jquery_zoom/jquery.zoom.min.js"></script>
-
+<script type="text/javascript">
+$(document).on("keydown",function(ev){
+  console.log(ev.keyCode);
+  if(ev.keyCode===27||ev.keyCode===122) return false
+})
+</script>
 <script type="text/javascript">
   var base_url = "<?php echo base_url(); ?>";
   id_tes = "<?php echo $id_tes; ?>";
